@@ -39,16 +39,30 @@ public class TableController {
         return redirect;
     }
 
-    @GetMapping("/{schema}/{table}/insert")
+    @GetMapping("/{schema}/{table}/create")
     public String getCreate(@PathVariable String schema, @PathVariable String table, Model model){
         model.addAttribute("schema", schema);
         model.addAttribute("table", table);
         return "insert";
     }
 
-    @PostMapping("/{schema}/{table}/insert")
+    @PostMapping("/{schema}/{table}/create")
     public String create(@ModelAttribute("metaData") String metaData, @PathVariable String schema, @PathVariable String table){
         recordService.createTable(schema, table, metaData);
+        String redirect = "redirect:/"+schema+"/"+table+"/view";
+        return redirect;
+    }
+
+    @GetMapping("/{schema}/{table}/query")
+    public String getQueryForm(@PathVariable String schema, @PathVariable String table, Model model){
+        model.addAttribute("schema", schema);
+        model.addAttribute("table", table);
+        return "query";
+    }
+
+    @PostMapping("/{schema}/{table}/query")
+    public String sendQuery(@ModelAttribute("metaData") String query, @PathVariable String schema, @PathVariable String table){
+        recordService.sendQuery(schema, table, query);
         String redirect = "redirect:/"+schema+"/"+table+"/view";
         return redirect;
     }

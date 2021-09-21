@@ -17,15 +17,15 @@
 <div class = "container">
     <div class = "row">
         <div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
-            <h1 class = "text-center"> Insert New Record </h1>
+            <h1 class = "text-center"> Query Table </h1>
             <div class = "card-body">
-                <form action="/${schema}/${table}/insert" method="POST">
-                        <div class ="form-group">
-                            <input type="text" name="values"/>
-                        </div>
-                        <div class = "box-footer">
-                            <button type="submit" class = "btn btn-primary">Submit</button>
-                        </div>
+                <form action="/${schema}/${table}/query" method="POST">
+                    <div class ="form-group">
+                        <input type="text" name="query"/>
+                    </div>
+                    <div class = "box-footer">
+                        <button type="submit" class = "btn btn-primary">Submit</button>
+                    </div>
                 </form>
             </div>
         </div>

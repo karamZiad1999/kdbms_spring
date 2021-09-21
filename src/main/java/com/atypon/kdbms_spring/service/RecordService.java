@@ -48,4 +48,8 @@ public class RecordService {
         String query = "USE " + schemaName + " CREATE TABLE " + metaData;
         return recordRepository.getQuery(query);
     }
+
+    public Payload sendQuery(String schemaName, String tableName, String query){
+        return recordRepository.getQuery(query);
+    }
 }

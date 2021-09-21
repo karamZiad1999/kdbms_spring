@@ -23,7 +23,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Navbar links -->
+
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
             <li class="nav-item">

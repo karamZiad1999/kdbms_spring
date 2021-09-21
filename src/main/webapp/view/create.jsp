@@ -9,7 +9,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-    <!-- Brand -->
+
     <a class="navbar-brand" href="#">KDBMS</a>
 </nav>
 <br>
